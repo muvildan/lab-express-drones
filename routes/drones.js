@@ -10,7 +10,7 @@ router.route('/drones')
   // ... your code here
   try {
     let findDrones = await Drone.find()
-    res.render("drones/list", findDrones)
+    res.render("drones/list", {findDrones})
   }
   catch (err) {
   console.log(err)
